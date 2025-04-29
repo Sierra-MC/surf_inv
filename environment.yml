@@ -1,0 +1,6 @@
+name: surfinv
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - pandas

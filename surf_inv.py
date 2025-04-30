@@ -34,10 +34,10 @@ def create_output_row(tribal_tracts, allotted_tracts, df_trust):
     allotted_acres = allotted_tracts['Acres'].sum()
     trust_acres = df_trust['Acres'].sum()
     trust_interest_perc = df_trust['OwnerDec'].sum() / len(df_trust)
-    row = DataFrame({'Tribal Acreage': tribal_acres,
-                     'Allotted Acreage':  allotted_acres,
-                     'Trust Acreage': trust_acres,
-                     'Trust Interest %': trust_interest_perc
+    row = DataFrame.from_dict({'Tribal Acreage': tribal_acres,
+                                'Allotted Acreage':  allotted_acres,
+                                'Trust Acreage': trust_acres,
+                                'Trust Interest %': trust_interest_perc
     })
     return row
 

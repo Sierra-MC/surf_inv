@@ -53,7 +53,9 @@ The output of the script will be a `.csv` file that contains 5 columns:
   - Summation of acres of tracts within this LAC that have any percentage trust ownership and are less than 100% tribally owned
 
 #### Column 4: Trust Acreage
-  - Summation of acres of tracts with _any_ trust ownership within this LAC (*note*: This should always be equal to the sum of the two prior columns, but is not directly calculated that way in the script so if it is not, that is an indication that there may be an issue)
+  - Summation of acres of tracts with _any_ trust ownership within this LAC
+    
+  **note**: This should always be equal to the sum of the two prior columns, (but is not directly calculated that way in the script) so if it is not, that is an indication that there may be an issue
 
 #### Column 5: Trust Interest %
   - This is the % of the trust acreage in the LAC with trust ownership type. While all tracts with any trust ownership are considered part of trust acreage and are managed in trust, there can still be partial fee owners on those tracts. 

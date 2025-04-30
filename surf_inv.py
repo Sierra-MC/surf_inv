@@ -50,7 +50,7 @@ def single_file_workflow(infile, outfile, to_csv=True):
     output = create_output_row(*group_tracts_by_category(df))
     output.insert(0, 'LAC', lac)
     if to_csv:
-        output.to_csv(Path(outfile))
+        output.to_csv(Path(outfile), index=False)
     else:
         return output
 

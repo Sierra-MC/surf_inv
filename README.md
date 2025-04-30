@@ -6,7 +6,7 @@ Requires a TAAMS QLIK pull with columns in the following order:
 1. General - Land Area Code
 2. General - Tract Reference No.
 3. General - Acres
-4. General - Inactived Date (Filtered to just 0)
+4. General - Inactivated Date (Filtered to just 0)
 5. General - Resource Code (Filtered to B, S, D, E, and F)
 6. Ownership - Entity Type Code
 7. Ownership - Interest Type Code (Filtered to A, J, O, P, T, and V)

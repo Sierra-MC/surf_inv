@@ -18,8 +18,15 @@ Requires a TAAMS QLIK pull with columns in the following order:
 It is critical that the column order and filtering is correctly applied.
 
 ### Example Usage:
+First the conda environment needs to be activated and the python shell needs to be started:
+```
+conda activate surfinv
+python
+```
+
 To create surface inventory table for a single LAC:
 ```
+from surf_inv import single_file_workflow
 infile = 'C:/Users/sierra.brown/OneDrive - DOI/Documents/224_Surface_Inv.xlsx'
 outfile = infile.split(infile.split('/')[-1])[0] + '224_Surface_Inv_Summ.csv'
 single_file_workflow(infile, outfile)
@@ -27,6 +34,7 @@ single_file_workflow(infile, outfile)
 
 OR, for batch workflow, where all the TAAMS pulls files for each LAC are located in `infolder`:
 ```
+from surf_inv import batch_workflow
 infolder = 'C:/Users/sierra.brown/OneDrive - DOI/Documents/SurfaceInvTAAMSpulls/'
 outfile = 'Surface_Inventory_Summ.csv'
 batch_workflow(infolder, outfile)

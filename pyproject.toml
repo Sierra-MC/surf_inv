@@ -1,0 +1,42 @@
+# pyproject.toml documentation for reference:
+#   https://packaging.python.org/en/latest/
+#   https://setuptools.pypa.io/en/latest/userguide/
+
+[project]
+name        = "surf_inv"
+version     = "1.0.0"
+description = "Surface Inventory scripts for BIA TAAMS data summary creation"
+readme      = "README.md"
+license     = { file = "LICENSE" }
+
+authors     = [
+    { name = "Sierra Brown",      email = "sierra.brown@bia.gov"   },
+]
+
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+]
+
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+]
+
+[project.urls]
+Repository = "https://github.com/Sierra-MC/surf_inv"
+
+[build-system]
+requires = ["setuptools >= 64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["surf_inv*"]
+namespaces = false
+
+# Recommended for new projects by pytest manual.
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib"
+]

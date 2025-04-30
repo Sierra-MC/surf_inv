@@ -2,8 +2,6 @@ from pandas import read_excel, concat
 import pandas as pd
 from pathlib import Path
 
-from pandas.core.interchange.dataframe_protocol import DataFrame
-
 
 def read_taams_pull(file):
     path = Path(file)

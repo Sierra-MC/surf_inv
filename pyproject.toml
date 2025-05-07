@@ -3,7 +3,7 @@
 #   https://setuptools.pypa.io/en/latest/userguide/
 
 [project]
-name        = "surf_inv"
+name        = "surfinv"
 version     = "1.0.0"
 description = "Surface Inventory scripts for BIA TAAMS data summary creation"
 readme      = "README.md"
@@ -32,7 +32,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["surf_inv*"]
+include = ["surfinv*"]
 namespaces = false
 
 # Recommended for new projects by pytest manual.

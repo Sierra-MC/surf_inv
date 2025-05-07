@@ -1,4 +1,4 @@
-# surf_inv
+# surfinv
 Scripts for BIA surface inventory calculations from TAAMS. No data included.
 
 Requires a TAAMS QLIK pull with columns in the following order:
@@ -26,7 +26,7 @@ python
 
 To create surface inventory table for a single LAC:
 ```
-from surf_inv import single_file_workflow
+from surfinv import single_file_workflow
 infile = 'C:/Users/sierra.brown/OneDrive - DOI/Documents/224_Surface_Inv.xlsx'
 outfile = infile.split(infile.split('/')[-1])[0] + '224_Surface_Inv_Summ.csv'
 single_file_workflow(infile, outfile)
@@ -34,7 +34,7 @@ single_file_workflow(infile, outfile)
 
 OR, for batch workflow, where all the TAAMS pulls files for each LAC are located in `infolder`:
 ```
-from surf_inv import batch_workflow
+from surfinv import batch_workflow
 infolder = 'C:/Users/sierra.brown/OneDrive - DOI/Documents/SurfaceInvTAAMSpulls/'
 outfile = 'Surface_Inventory_Summ.csv'
 batch_workflow(infolder, outfile)

@@ -44,7 +44,7 @@ def single_file_workflow(infile, outfile, to_csv=True):
     df, lac = read_taams_pull(infile)
     ownership_issues, _ = check_sum_to_1(df)
     if ownership_issues > 0:
-        return 'Error: Tracts included without sum to 1 title ownership; check TAAMS pull'
+        raise Exception('Error: Tracts included without sum to 1 title ownership; check TAAMS pull')
     output = create_output_row(*group_tracts_by_category(df))
     output.insert(0, 'LAC', lac)
     if to_csv:

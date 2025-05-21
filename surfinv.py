@@ -29,13 +29,14 @@ def combine_owners(df):
     return sum_by_refno
 
 def group_tracts_by_category(df):
-    """Groups a dataframe in to three dataframes. One with the tribally owned tracts, one with the
+    """Groups a dataframe in to three dataframes. One with the tribally owned trust tracts, one with the
     allotted tracts, and one with all trust tracts. Note there can (and should) be overlap on which
     tracts are included in the trust dataframe and the other two."""
     df = combine_owners(df)
     tribal_tracts = df[df['EntityType']=='TRBE'][df['OwnerDec'] == 1.0]
     df_trust = df[df['OwnershipType'].str.contains('Trust')].groupby(['TractRefNo', 'Acres', 'OwnershipType'], as_index=False)['OwnerDec'].sum()
     allotted_tracts = df_trust[~df_trust.isin(tribal_tracts)].dropna()
+    tribal_tracts = df_trust[df_trust.isin(tribal_tracts)].dropna()
     return tribal_tracts, allotted_tracts, df_trust
 
 def create_output_row(tribal_tracts, allotted_tracts, df_trust):

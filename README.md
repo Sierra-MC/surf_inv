@@ -47,7 +47,7 @@ The output of the script will be a `.csv` file that contains 5 columns:
   - LAC as entered in TAAMS
     
 #### Column 2: Tribal Acreage
-  - Summation of acres of tracts within this LAC that are 100% tribally owned
+  - Summation of acres of tracts within this LAC that have any percentage trust ownership and are 100% tribally owned
 
 #### Column 3: Allotted Acreage
   - Summation of acres of tracts within this LAC that have any percentage trust ownership and are less than 100% tribally owned

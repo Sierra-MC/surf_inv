@@ -35,8 +35,8 @@ def group_tracts_by_category(df):
     df = combine_owners(df)
     tribal_tracts = df[df['EntityType']=='TRBE'][df['OwnerDec'] == 1.0]
     df_trust = df[df['OwnershipType'].str.contains('Trust')].groupby(['TractRefNo', 'Acres', 'OwnershipType'], as_index=False)['OwnerDec'].sum()
-    allotted_tracts = df_trust[~df_trust.isin(tribal_tracts)].dropna()
-    tribal_tracts = df_trust[df_trust.isin(tribal_tracts)].dropna()
+    allotted_tracts = df_trust[~df_trust['TractRefNo'].isin(tribal_tracts['TractRefNo'])].dropna()
+    tribal_tracts = df_trust[df_trust['TractRefNo'].isin(tribal_tracts['TractRefNo'])].dropna()
     return tribal_tracts, allotted_tracts, df_trust
 
 def create_output_row(tribal_tracts, allotted_tracts, df_trust):

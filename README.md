@@ -69,7 +69,7 @@ The methdology for these surface acreage pulls was developed over the course of 
 **Tribal Acreage**: Surface acres from tracts that contain 100% tribal ownership and have any percentage trust ownership.
 **Allotted Acreage**: Surface acres from tracts that are less than 100% tribally owned and have any percentage trust ownership.
 
-### The QLIK Query Explained
+#### The QLIK Query Explained
 
 As explained above, the first step is to create a QLIK pull for the LAC(s) of interest with the columns in the following order:
 
@@ -109,7 +109,7 @@ The _Ownership - Owner Seq. No_ is incredibly important. While a seemingly small
 
 The _Ownership - Owner Type Code_ tells us if an interest is being held in trust, restricted fee, or fee. While a tract can be split between trust and another owner type interest, if any part of the tract is held in trust, the entire acreage is included as trust acreage (as explained above in the trust acreage definitions.
 
-### The Code Calculations: A plain language walkthrough
+#### The Code Calculations: A plain language walkthrough
 
 Right, now that we've gotten a good understanding of the various QLIK columns and why they're included, let's move onto the process that this pull undergoes in the code to get to our end calcualtions of surface acreage. Note that this explanation is a walkthrough of what is happening "under the hood" with the code. A user does not need to interact with the majority of these functions at all and should refer to the the above "Example Usage" section for the execution instructions.
 

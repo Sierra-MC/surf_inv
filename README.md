@@ -61,16 +61,16 @@ The output of the script will be a `.csv` file that contains 5 columns:
   - This is the decimal (out of 1.0) of the trust acreage in the LAC with trust ownership type. While all tracts with any trust ownership are considered part of trust acreage and are managed in trust, there can still be partial fee owners on those tracts. 
 
 ### Methodological Explanation:
-The methdology for these surface acreage pulls was developed over the course of several months in consultation with representatives from several departments. There are multiple possible methodologies for calculating surface acreage based on the definitions chosen for various categories; no one way is necessarily "wrong" or "correct". This section explains the methods used _here_ so they can be understood and replicated.
+The methdology for these surface acreage pulls was developed over the course of several months in consultation with representatives from several departments. There are multiple possible methodologies for calculating surface acreage based on the definitions chosen for various categories; no one way is necessarily "wrong" or "correct". This section explains the methods and definitions used _here_ so they can be understood and replicated.
 
 #### Definitions:
-**Surface Acreage**: Acres from tracts that have surface rights in trust. Any tracts which combine of surface rights with any form of mineral rights are also included.
+_Surface Acreage_: Acres from tracts that have surface rights in trust. Any tracts which combine of surface rights with any form of mineral rights are also included.
 
-**Trust Acreage**: Acres of tracts with any percentage trust ownership.
+_Trust Acreage_: Acres of tracts with any percentage trust ownership.
 
-**Tribal Acreage**: Surface acres from tracts that contain 100% tribal ownership and have any percentage trust ownership.
+_Tribal Acreage_: Surface acres from tracts that contain 100% tribal ownership and have any percentage trust ownership.
 
-**Allotted Acreage**: Surface acres from tracts that are less than 100% tribally owned and have any percentage trust ownership.
+_Allotted Acreage_: Surface acres from tracts that are less than 100% tribally owned and have any percentage trust ownership.
 
 #### The QLIK Query Explained
 

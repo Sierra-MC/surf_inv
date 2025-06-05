@@ -64,9 +64,12 @@ The output of the script will be a `.csv` file that contains 5 columns:
 The methdology for these surface acreage pulls was developed over the course of several months in consultation with representatives from several departments. There are multiple possible methodologies for calculating surface acreage based on the definitions chosen for various categories; no one way is necessarily "wrong" or "correct". This section explains the methods used _here_ so they can be understood and replicated.
 
 #### Definitions:
-**Surface Acerage**: Acres from tracts that have surface rights in trust. Any tracts which combine of surface rights with any form of mineral rights are also included.
+**Surface Acreage**: Acres from tracts that have surface rights in trust. Any tracts which combine of surface rights with any form of mineral rights are also included.
+
 **Trust Acreage**: Acres of tracts with any percentage trust ownership.
+
 **Tribal Acreage**: Surface acres from tracts that contain 100% tribal ownership and have any percentage trust ownership.
+
 **Allotted Acreage**: Surface acres from tracts that are less than 100% tribally owned and have any percentage trust ownership.
 
 #### The QLIK Query Explained
